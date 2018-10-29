@@ -58,7 +58,6 @@ brew_packages:
   - glib
   - libgpg-error
   - php@7.1
-  - tflint
   - watch
 
 brew_cask_packages:
