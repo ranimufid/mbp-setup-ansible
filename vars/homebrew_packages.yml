@@ -63,7 +63,7 @@ brew_packages:
 brew_cask_packages:
   - java
   - dropbox
-  - font-source-code-pro
+  - font-spacemono-nerd-font
   - karabiner-elements
   - slate
   - terraform-0.11.8
@@ -86,5 +86,5 @@ brew_cask_packages:
   - sublime-text
   - terraform-0.11.7
   - vlc
-  - dbeaver-enterprise
+  - dbeaver-community
   - wkhtmltopdf
