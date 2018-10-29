@@ -89,4 +89,3 @@ brew_cask_packages:
   - vlc
   - dbeaver-enterprise
   - wkhtmltopdf
-  - virtualbox
