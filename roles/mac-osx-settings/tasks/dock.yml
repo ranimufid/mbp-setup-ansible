@@ -54,7 +54,7 @@
   when: Dock_ShowHidden is defined
   notify: restart Dock
 
-- name: "Dock - Extra - Speeding up Mission Control animations"
-  osx_defaults: { domain: 'com.apple.dock', key: 'expose-animation-duration', type: boolean, value: "{{Dock_ExposeAnimationDuration}}" }
-  when: Dock_ExposeAnimationDuration is defined
-  notify: restart Dock
+# - name: "Dock - Extra - Speeding up Mission Control animations"
+#   osx_defaults: { domain: 'com.apple.dock', key: 'expose-animation-duration', type: boolean, value: "{{Dock_ExposeAnimationDuration}}" }
+#   when: Dock_ExposeAnimationDuration is defined
+#   notify: restart Dock
