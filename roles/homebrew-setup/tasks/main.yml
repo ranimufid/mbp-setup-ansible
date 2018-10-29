@@ -21,20 +21,20 @@
   when: homebrew_exists.stat.exists
   changed_when: false
 
-- name: Installing Homebrew Packages
-  homebrew:
-    name: "{{ brew_packages }}"
-    state: "present"
-    upgrade_all: "{{ upgrade_homebrew_packages }}"
-  # with_items: '{{ brew_packages }}'
-  when: homebrew_exists.stat.exists
-
 - name: Installing Homebrew Cask Packages
   homebrew_cask:
     name: "{{ item }}"
     state: "present"
     install_options: 'appdir=/Applications'
   with_items: '{{ brew_cask_packages }}'
+  when: homebrew_exists.stat.exists
+
+- name: Installing Homebrew Packages
+  homebrew:
+    name: "{{ brew_packages }}"
+    state: "present"
+    upgrade_all: "{{ upgrade_homebrew_packages }}"
+  # with_items: '{{ brew_packages }}'
   when: homebrew_exists.stat.exists
 
 - name: Cleaning up homebrew
