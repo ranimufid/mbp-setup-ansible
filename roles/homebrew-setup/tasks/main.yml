@@ -6,7 +6,8 @@
   register: homebrew_exists
 
 - name: Install homebrew
-  shell:  'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+  shell:  'ruby -e "$(curl -fsSL https://raw .githubusercontent.com/Homebrew/install/master/install)"'
+  become: true
   when: not homebrew_exists.stat.exists
 
 - name: Updating Homebrew
@@ -22,10 +23,10 @@
 
 - name: Installing Homebrew Packages
   homebrew:
-    name: "{{ item }}"
+    name: "{{ brew_packages }}"
     state: "present"
     upgrade_all: "{{ upgrade_homebrew_packages }}"
-  with_items: '{{ brew_packages }}'
+  # with_items: '{{ brew_packages }}'
   when: homebrew_exists.stat.exists
 
 - name: Installing Homebrew Cask Packages
