@@ -1,0 +1,41 @@
+---
+# tasks file for homebrew-setup
+- name: Verify if homebrew has been installed
+  stat:
+    path: "/usr/local/bin/brew"
+  register: homebrew_exists
+
+- name: Install homebrew
+  shell:  'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+  when: not homebrew_exists.stat.exists
+
+- name: Updating Homebrew
+  homebrew:
+    update_homebrew: true
+  when: homebrew_exists.stat.exists
+
+- name: Add brew taps
+  shell: brew tap "{{ item }}"
+  with_items: '{{ brew_taps }}'
+  when: homebrew_exists.stat.exists
+  changed_when: false
+
+- name: Installing Homebrew Packages
+  homebrew:
+    name: "{{ item }}"
+    state: "present"
+    upgrade_all: "{{ upgrade_homebrew_packages }}"
+  with_items: '{{ brew_packages }}'
+  when: homebrew_exists.stat.exists
+
+- name: Installing Homebrew Cask Packages
+  homebrew_cask:
+    name: "{{ item }}"
+    state: "present"
+    install_options: 'appdir=/Applications'
+  with_items: '{{ brew_cask_packages }}'
+  when: homebrew_exists.stat.exists
+
+- name: Cleaning up homebrew
+  shell: brew cleanup
+  when: homebrew_exists.stat.exists

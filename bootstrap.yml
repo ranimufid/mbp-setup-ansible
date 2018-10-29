@@ -1,0 +1,17 @@
+# the reason we're using default(var, true) is: http://nikhilism.com/post/2016/understanding-ansible-jinja2-default-filter/
+---
+- hosts: "{{ target_host | default('localhost') }}"
+  connection: local
+
+  vars_files:
+    - "vars/homebrew_packages.yml"
+    - "vars/global_packages.yml"
+
+  roles:
+    - name: mac-osx-settings
+      tags: ["mac-osx-settings"]
+    - name: homebrew-setup
+      tags: ["homebrew-setup"]
+    - name: global-packages
+      tags: ["global-packages"]
+
