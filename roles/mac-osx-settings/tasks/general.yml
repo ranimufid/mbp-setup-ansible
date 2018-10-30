@@ -68,3 +68,27 @@
 - name: "General - Expanding the save panel by default - print2"
   osx_defaults: { domain: 'NSGlobalDomain', key: 'PMPrintingExpandedStateForPrint2', type: bool, value: "{{ General_PMPrintingExpandedStateForPrint2 }}" }
   when: General_PMPrintingExpandedStateForPrint2 is defined
+
+- name: "General - Automatically quit printer app once the print jobs complete"
+  command: defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+  when: General_PrintingPrefsQuitWhenFinished is defined
+  changed_when: false
+
+- name: "General - Setting trackpad & mouse speed to a reasonable number"
+  shell: defaults write -g com.apple.trackpad.scaling "{{ General_TrackPadScaling }}" && defaults write -g com.apple.mouse.scaling "{{ General_MouseScaling }}"
+  when: General_MouseTrackPadScaling is defined and General_TrackPadScaling is defined and General_MouseScaling is defined
+  changed_when: false
+
+- name: "General - Preventing Time Machine from prompting to use new hard drives as backup volume"
+  shell: defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+  when: General_DoNotOfferNewDisksForBackup is defined
+  changed_when: false
+
+- name: "General - Setting screenshots location and filetype"
+  shell: defaults write com.apple.screencapture location -string "{{ General_ScreenshotLocation }}" && defaults write com.apple.screencapture type -string "{{ General_ScreenshotFileType }}"
+  when: General_ScreenshotLocation is defined and General_ScreenshotFileType is defined
+  changed_when: false
+
+- name: "General - Use specific folder to store incomplete downloads"
+  shell: defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true && defaults write org.m0k.transmission IncompleteDownloadFolder -string "{{ General_IncompleteDownloadFolderPath }}"
+  when: General_UseIncompleteDownloadFolder is defined and General_IncompleteDownloadFolderPath is defined

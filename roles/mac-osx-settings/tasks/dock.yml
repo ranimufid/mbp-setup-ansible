@@ -1,6 +1,6 @@
 ---
 - name: "Dock - Size"
-  osx_defaults: { domain: 'com.apple.dock', key: 'tilesize', type: float, value: "{{ Dock_TileSize }}" }
+  osx_defaults: { domain: 'com.apple.dock', key: 'tilesize', type: int, value: "{{ Dock_TileSize }}" }
   when: Dock_TileSize is defined
   notify: restart Dock
 
@@ -54,7 +54,12 @@
   when: Dock_ShowHidden is defined
   notify: restart Dock
 
-# - name: "Dock - Extra - Speeding up Mission Control animations"
-#   osx_defaults: { domain: 'com.apple.dock', key: 'expose-animation-duration', type: boolean, value: "{{Dock_ExposeAnimationDuration}}" }
-#   when: Dock_ExposeAnimationDuration is defined
-#   notify: restart Dock
+- name: "Dock - Extra - Speeding up Mission Control animations (duration)"
+  osx_defaults: { domain: 'com.apple.dock', key: 'expose-animation-duration', type: float, value: "{{Dock_ExposeAnimationDuration}}" }
+  when: Dock_ExposeAnimationDuration is defined
+  notify: restart Dock
+
+- name: "Dock - Extra - Speeding up Mission Control animations (group by app)"
+  osx_defaults: { domain: 'com.apple.dock', key: 'expose-group-by-app', type: boolean, value: "{{Dock_ExposeGroupByApp}}" }
+  when: Dock_ExposeAnimationDuration is defined
+  notify: restart Dock
