@@ -1,0 +1,29 @@
+---
+- name: "ZSH - Check if ZSH is installed"
+  stat:
+    path: ~/.oh-my-zsh
+  register: zsh_exists
+
+- name: "ZSH - Check if ZSH custom plugins are installed"
+  stat:
+    path: ~/.oh-my-zsh/custom/plugins
+  register: zsh_custom_plugins
+
+- name: "ZSH - Installing oh-my-zsh"
+  command: curl -L http://install.ohmyz.sh | sh
+  when: zsh_exists.stat.exists|bool != true
+
+- name: "ZSH - Setting up plugins"
+  shell: cd ~/.oh-my-zsh/custom/plugins && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+  when: zsh_custom_plugins.stat.exists|bool != true
+
+- name: "ZSH - Setting default shell"
+  become: true
+  shell: "chsh -s $(which zsh) {{ ansible_user_id }}"
+  when: not zsh_exists.stat.exists
+  register: chsh_result
+  changed_when: "'chsh: no changes made' not in chsh_result.stderr"
+
+- name: "SpaceVim - Installing space vim"
+  shell: curl -sLf https://spacevim.org/install.sh | bash -s -- --install vim
+  changed_when: false

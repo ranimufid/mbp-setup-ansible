@@ -27,7 +27,7 @@ DateTime_FlashDateSeparators: false              # Flash the time separators
 DateTime_IsAnalog: false                         # Analog menu bar clock
 
 DesktopScreenSaver_Enabled: false                # Enable Desktop and Screen Saver configuration
-DesktopScreenSaver_BackGroundImage: ""           # Background iamge
+DesktopScreenSaver_BackGroundImage: ""           # Background image
 
 Displays_Enabled: true                           # Enable Displays configuration
 Displays_AutomaticallyAdjustBrightness: false    # Automatically adjust brightness
@@ -37,7 +37,7 @@ Displays_DisplayResolutionEnabled: true          # Enable HiDPI display modes (r
 
 Dock_Enabled: true                               # Enable Dock configuration
 Dock_TileSize: 36                                # Dock size
-Dock_Magnification: true                         # Dock magnification
+Dock_Magnification: false                        # Dock magnification
 Dock_LargeSize: 128                              # Icon size of magnified Dock items
 Dock_Orientation: "bottom"                       # Dock orientation: left, bottom, right
 Dock_MinEffect: "genie"                          # Minimization effect: genie, scale, suck
@@ -48,6 +48,7 @@ Dock_Autohide: true                              # Automatically hide and show t
 Dock_ShowProcessIndicators: true                 # Show indicator for open applications
 Dock_ShowHidden: false                           # Display translucent Dock icons for hidden applications
 Dock_ExposeAnimationDuration: 0.1                # Speeding up Mission Control animations
+Dock_ExposeGroupByApp: true                      # Group windows by application
 
 
 Finder_Enabled: true                             # Enable Finder configuration
@@ -73,7 +74,7 @@ Finder_FXShowPosixPathInTitle: false             # Show full POSIX path as Finde
 Finder_QLEnableTextSelection: true               # Allow text selection in Quick Look
 Finder_DSDontWriteNetworkStores: true            # Avoiding the creation of .DS_Store files on network volumes
 
-General_Enabled: false                           # Enable General configuration
+General_Enabled: true                            # Enable General configuration
 General_AppleAquaColorVariant: 1                 # Set appearance (1: Blue, 6: Graphite)
 General_AppleInterfaceStyle: ""                  # Use Dark menu bar and Dock (Empty or "Dark")
 General_AutoHideMenuBar: false                   # Automatically hide and show the menu bar
@@ -88,6 +89,15 @@ General_NSDisableAutomaticTermination: true      # Disabling automatic terminati
 General_NSNavPanelExpandedStateForSaveMode: true # Expanding the save panel by default
 General_PMPrintingExpandedStateForPrint: true    # Expanding the save panel by default
 General_PMPrintingExpandedStateForPrint2: true   # Expanding the save panel by default
+General_PrintingPrefsQuitWhenFinished: true      # Automatically quit printer app once the print jobs complete
+General_MouseTrackPadScaling: true               # Enable trackpad scaling configuration
+General_TrackPadScaling: 2                       # Set trackpad scaling
+General_MouseScaling: 2.5                        # Set mouse scaling
+General_DoNotOfferNewDisksForBackup: true        # Preventing Time Machine from prompting to use new hard drives as backup volume
+General_ScreenshotLocation: "$HOME/Desktop"      # Setting screenshots location to ~/Desktop
+General_ScreenshotFileType: "png"                # Setting screenshot filetype to png
+General_UseIncompleteDownloadFolder: true        # Use specific folder to store incomplete downloads
+General_IncompleteDownloadFolderPath: "${HOME}/Downloads/Incomplete" # Incomplete download folder path
 
 ICloud_Enabled: false                            # Enable iCloud configuration
 ICloud_NSDocumentSaveNewDocumentsToCloud: true   # Save to iCloud by default
@@ -106,8 +116,6 @@ Keyboard_PowerButtonSleepsSystem: false            # Prevent accidental Power bu
 Keyboard_PressAndHoldEnabled: false                # Disable press-and-hold for keys in favor of key repeat
 
 LanguageRegion_Enabled: false                    # Enable Language and Region configuration
-#TODO: https://github.com/ansible/ansible-modules-extras/issues/2610
-#LanguageRegion_Languages: [ "en", "fr" ]        # Preferred languages (in order of preference e.g. [ "en", "fr" ])
 LanguageRegion_Locale: "en_US@currency=USD"      # Locale and Currency (United States : en_US@currency=USD, Great Britian : en_GB@currency=EUR)
 LanguageRegion_MeasurementUnits: "Inches"        # Measure Units (Inches, Centimeters)
 LanguageRegion_Force24HourTime: "true"           # Force 12/24 hour time
