@@ -10,8 +10,8 @@ Ansible based solution to simplify the setup of a mbp. The roles were written in
 ## Usage
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer)
-  2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-pip).
-  3. Clone this repository to your local drive.
+  2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-pip)
+  3. Clone this repository to your local drive
   4. Run `ansible-playbook bootstrap.yml` inside this directory. Enter your account password when prompted (sudo might be required for setting up some specific tasks)
 
 ### Running a specific set of tagged tasks
@@ -23,9 +23,9 @@ You can filter which part of the provisioning process to run by specifying a set
 Not everyone's development environment and preferred software configuration is the same.
 
 You can customize which packages need to be installed or settings should be configured by modifying the following files:
-  1. `mac-osx-settings`: https://github.com/ranimufid/mbp-setup-ansible/blob/master/vars/mac_osx_settings.yml
-  2. `homebrew-setup`: https://github.com/ranimufid/mbp-setup-ansible/blob/master/vars/homebrew_packages.yml
-  3. `global-packages`: https://github.com/ranimufid/mbp-setup-ansible/blob/master/vars/global_packages.yml
+  1. [`mac-osx-settings`](https://github.com/ranimufid/mbp-setup-ansible/blob/master/vars/mac_osx_settings.yml)
+  2. [`homebrew-setup`](https://github.com/ranimufid/mbp-setup-ansible/blob/master/vars/homebrew_packages.yml)
+  3. [`global-packages`](https://github.com/ranimufid/mbp-setup-ansible/blob/master/vars/global_packages.yml)
 
 ## Dotfile management
 
