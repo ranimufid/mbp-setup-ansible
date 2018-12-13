@@ -27,7 +27,6 @@
     state: "present"
     install_options: 'appdir=/Applications'
   with_items: '{{ brew_cask_packages }}'
-  become: true
   when: homebrew_exists.stat.exists
 
 - name: Installing Homebrew Packages
