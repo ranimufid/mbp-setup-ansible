@@ -27,3 +27,5 @@
 - name: "SpaceVim - Installing space vim"
   shell: curl -sLf https://spacevim.org/install.sh | bash -s -- --install vim
   changed_when: false
+  args:
+    warn: false

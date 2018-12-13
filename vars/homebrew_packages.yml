@@ -7,6 +7,7 @@ brew_taps:
   - homebrew/services
   - homebrew/bundle
   - yleisradio/terraforms
+  - caskroom/fonts
 
 brew_packages:
   - ansible
@@ -44,20 +45,17 @@ brew_packages:
   - zsh
   - chtf
   - git-crypt
-  - macvim
   - php
   - telnet
   - zsh-autosuggestions
   - composer
   - git-extras
   - maven
-  - php@7.0
   - terraform_landscape
   - zsh-syntax-highlighting
   - coreutils
   - glib
   - libgpg-error
-  - php@7.1
   - watch
 
 brew_cask_packages:
@@ -88,3 +86,6 @@ brew_cask_packages:
   - vlc
   - dbeaver-community
   - wkhtmltopdf
+  - font-menlo-for-powerline
+  - font-fira-code
+  - visual-studio-code

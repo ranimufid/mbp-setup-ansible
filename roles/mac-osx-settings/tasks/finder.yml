@@ -103,7 +103,7 @@
   notify: restart Finder
 
 - name: "Finder - Extra - Show Hidden Files"
-  osx_defaults: { domain: 'com.apple.finder', key: 'AppleShowAllFiles', type: bool, value: "{{ Finder_AppleShowAllFiles }}" }
+  osx_defaults: { domain: 'com.apple.finder', key: 'AppleShowAllFiles', type: string, value: "{{ Finder_AppleShowAllFiles }}" }
   when: Finder_AppleShowAllFiles is defined
   notify: restart Finder
 

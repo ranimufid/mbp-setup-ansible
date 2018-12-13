@@ -6,6 +6,9 @@ npm_packages:
   - name: yarn
     state: present
     version: latest
+  - name: eslint
+    state: present
+    version: latest
 
 pip_packages:
   - name: ansible

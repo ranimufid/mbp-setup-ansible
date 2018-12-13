@@ -62,7 +62,7 @@ Finder_AppleShowAllExtensions: false             # Show all fiename extensions
 Finder_FXEnableExtensionChangeWarning: true      # Show warning before changing an extension
 Finder_WarnOnEmptyTrash: false                   # Show warning before emptying the trash
 Finder_FXDefaultSearchScope: "SCev"              # When performing a search (SCev:Search This Mac, SCcf:Search the Current Folder, SCsp:Use the Previous Search Scope)
-Finder_AppleShowAllFiles: false                  # Show hidden files
+Finder_AppleShowAllFiles: "false"                # Show hidden files
 Finder_FXPreferredViewStyle: "Clmv"              # View as (icnv:Icons, Nlsv:List, clmv:Column, Flwv:Cover Flow)
 Finder_FXPreferredGroupBy: "None"                # Arrange By (None, Name, Application Category, Date Last Opened, Date Added, Size, Finder Tags)
 Finder_ShowTabView: true                         # Show Tab Bar
