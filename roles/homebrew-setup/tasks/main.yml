@@ -18,7 +18,6 @@
 - name: Add brew taps
   shell: brew tap "{{ item }}"
   with_items: '{{ brew_taps }}'
-  when: homebrew_exists.stat.exists
   changed_when: false
 
 - name: Installing Homebrew Cask Packages
@@ -27,16 +26,12 @@
     state: "present"
     install_options: 'appdir=/Applications'
   with_items: '{{ brew_cask_packages }}'
-  when: homebrew_exists.stat.exists
 
 - name: Installing Homebrew Packages
   homebrew:
     name: "{{ brew_packages }}"
     state: "present"
     upgrade_all: "{{ upgrade_homebrew_packages }}"
-  # with_items: '{{ brew_packages }}'
-  when: homebrew_exists.stat.exists
 
 - name: Cleaning up homebrew
   shell: brew cleanup
-  when: homebrew_exists.stat.exists
