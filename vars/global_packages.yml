@@ -9,6 +9,9 @@ npm_packages:
   - name: eslint
     state: present
     version: latest
+  - name: gnomon
+    state: present
+    version: latest
 
 pip_packages:
   - name: ansible

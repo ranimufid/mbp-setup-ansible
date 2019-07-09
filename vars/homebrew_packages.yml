@@ -6,86 +6,121 @@ brew_taps:
   - homebrew/core
   - homebrew/services
   - homebrew/bundle
-  - yleisradio/terraforms
   - caskroom/fonts
+  - caskroom/versions
+  - datawire/blackbird
+  - derailed/k9s
+  - johanhaleby/kubetail
+  - prospectone/perfops
+  - reactiveops/tap
+  - wata727/tflint
+  - yleisradio/terraforms
 
 brew_packages:
   - ansible
-  - the_silver_searcher
-  - go
-  - mysql
-  - goaccess
-  - libpng
-  - node
-  - postgresql
-  - tree
-  - nvm
-  - pre-commit
-  - python
-  - vault
   - autoconf
-  - htop
-  - openssl
-  - python@2
-  - vim
   - automake
-  - httpie
-  - rancher-compose
-  - packer
-  - wget
+  - aws-elasticbeanstalk
   - awscli
-  - ruby
-  - jq
-  - yamllint
-  - git
-  - kubernetes-cli
-  - mackup
-  - perl
-  - teleport
-  - zsh
+  - azure-cli
+  - calicoctl
   - chtf
-  - git-crypt
-  - php
-  - telnet
-  - zsh-autosuggestions
   - composer
-  - git-extras
-  - maven
-  - terraform_landscape
-  - zsh-syntax-highlighting
   - coreutils
+  - datawire/blackbird/telepresence
+  - dep
+  - derailed/k9s/k9s
+  - figlet
+  - git
+  - git-crypt
+  - git-extras
   - glib
+  - go
+  - goaccess
+  - htop
+  - httpie
+  - jenkins-x/jx/jx
+  - johanhaleby/kubetail/kubetail
+  - jq
+  - kubectx
+  - kubernetes-cli
+  - kubernetes-helm
   - libgpg-error
+  - libidn
+  - libpng
+  - linkerd
+  - mackup
+  - macvim
+  - maven
+  - mysql
+  - neofetch
+  - neovim
+  - nvm
+  - openssl
+  - packer
+  - perl
+  - php
+  - php@7.1
+  - postgresql
+  - pre-commit
+  - prospectone/perfops/perfops
+  - python
+  - python@2
+  - rancher-compose
+  - reactiveops/tap/rbac-lookup
+  - ruby
+  - skaffold
+  - sops
+  - speedtest-cli
+  - stern
+  - teleport
+  - telnet
+  - terraform_landscape
+  - terraforming
+  - the_silver_searcher
+  - tree
+  - vault
+  - vim
+  - wata727/tflint/tflint
   - watch
+  - wget
+  - yamllint
+  - yarn
+  - yleisradio/terraforms/chtf
+  - zsh
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
 
 brew_cask_packages:
-  - java
-  - dropbox
-  - font-spacemono-nerd-font
-  - karabiner-elements
-  - slate
-  - terraform-0.11.8
   - alfred
-  - evernote
-  - google-chrome
-  - spotify
-  - vagrant
   - chefdk
+  - dbeaver-community
+  - docker
+  - dropbox
+  - evernote
   - firefox
+  - font-fira-code
+  - font-hack-nerd-font
+  - font-menlo-for-powerline
+  - font-source-code-pro
+  - font-spacemono-nerd-font
+  - google-chrome
   - iterm2
+  - java
+  - java8
+  - karabiner-elements
+  - karabiner-elements
+  - minikube
+  - ngrok
   - postman
   - skype
-  - sublime-merge
-  - terraform-0.11.3
-  - vagrant-manager
-  - docker
-  - font-hack-nerd-font
   - slack
+  - slate
+  - spotify
   - sublime-text
-  - terraform-0.11.7
-  - vlc
-  - dbeaver-community
-  - wkhtmltopdf
-  - font-menlo-for-powerline
-  - font-fira-code
+  - terraform-0.11.13
+  - terraform-0.12.0
+  - vagrant
+  - vagrant-manager
   - visual-studio-code
+  - vlc
