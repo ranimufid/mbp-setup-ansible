@@ -93,7 +93,6 @@ brew_packages:
 
 brew_cask_packages:
   - alfred
-  - chefdk
   - dbeaver-community
   - docker
   - dropbox
