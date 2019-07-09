@@ -29,3 +29,25 @@
   changed_when: false
   args:
     warn: false
+
+- name: "Prompt for user input before proceed to restore mackup"
+  pause:
+    prompt: "Press return once dropbox is done syncing"
+    echo: no
+
+- name: "mackup - restore"
+  shell: mackup restore
+  changed_when: false
+  args:
+    warn: false
+
+- name: Clone required repositories
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    version: "{{ item.branch }}"
+    key_file: "{{ item.key_file }}"
+    force: true
+    accept_hostkey: true
+    update: false
+  with_items: "{{ repositories_for_clone }}"

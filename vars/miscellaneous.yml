@@ -1,0 +1,6 @@
+---
+repositories_for_clone:
+  - repo: "git@github.com:myrepo.git"
+    branch: "develop"
+    dest: "~/localpath"
+    key_file: "~/.ssh/mysshkey"
