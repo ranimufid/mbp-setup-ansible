@@ -47,7 +47,6 @@ brew_packages:
   - linkerd
   - mackup
   - macvim
-  - maven
   - mysql
   - neofetch
   - neovim
