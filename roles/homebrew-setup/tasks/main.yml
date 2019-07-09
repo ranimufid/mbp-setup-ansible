@@ -6,7 +6,7 @@
   register: homebrew_exists
 
 - name: Install homebrew
-  shell:  'ruby -e "$(curl -fsSL https://raw .githubusercontent.com/Homebrew/install/master/install)"'
+  shell:  'yes | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   become: true
   when: not homebrew_exists.stat.exists
 
