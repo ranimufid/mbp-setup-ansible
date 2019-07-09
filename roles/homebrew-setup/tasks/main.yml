@@ -24,7 +24,7 @@
   homebrew:
     name: "{{ brew_packages }}"
     state: "present"
-    upgrade_all: "{{ upgrade_homebrew_packages }}"
+    upgrade_all: false
 
 - name: Installing Homebrew Cask Packages
   homebrew_cask:
