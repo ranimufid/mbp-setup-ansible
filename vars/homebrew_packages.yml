@@ -27,9 +27,7 @@ brew_packages:
   - chtf
   - composer
   - coreutils
-  - datawire/blackbird/telepresence
   - dep
-  - derailed/k9s/k9s
   - figlet
   - git
   - git-crypt
@@ -39,8 +37,6 @@ brew_packages:
   - goaccess
   - htop
   - httpie
-  - jenkins-x/jx/jx
-  - johanhaleby/kubetail/kubetail
   - jq
   - kubectx
   - kubernetes-cli
@@ -63,11 +59,7 @@ brew_packages:
   - php@7.1
   - postgresql
   - pre-commit
-  - prospectone/perfops/perfops
   - python
-  - python@2
-  - rancher-compose
-  - reactiveops/tap/rbac-lookup
   - ruby
   - skaffold
   - sops
@@ -81,15 +73,19 @@ brew_packages:
   - tree
   - vault
   - vim
-  - wata727/tflint/tflint
   - watch
   - wget
   - yamllint
-  - yarn
-  - yleisradio/terraforms/chtf
   - zsh
   - zsh-autosuggestions
   - zsh-syntax-highlighting
+  - wata727/tflint/tflint
+  - datawire/blackbird/telepresence
+  - derailed/k9s/k9s
+  - johanhaleby/kubetail/kubetail
+  - prospectone/perfops/perfops
+  - reactiveops/tap/rbac-lookup
+  - yleisradio/terraforms/chtf
 
 brew_cask_packages:
   - alfred
