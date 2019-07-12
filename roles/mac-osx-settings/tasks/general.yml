@@ -92,3 +92,7 @@
 - name: "General - Use specific folder to store incomplete downloads"
   shell: defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true && defaults write org.m0k.transmission IncompleteDownloadFolder -string "{{ General_IncompleteDownloadFolderPath }}"
   when: General_UseIncompleteDownloadFolder is defined and General_IncompleteDownloadFolderPath is defined
+
+- name: "General - Disable iTunes launching on connecting device"
+  shell: defaults write com.apple.iTunesHelper ignore-devices 1
+  when: General_DisableItunesLaunchOnConnectingDevice is defined

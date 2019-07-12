@@ -98,6 +98,7 @@ General_ScreenshotLocation: "$HOME/Desktop"      # Setting screenshots location 
 General_ScreenshotFileType: "png"                # Setting screenshot filetype to png
 General_UseIncompleteDownloadFolder: true        # Use specific folder to store incomplete downloads
 General_IncompleteDownloadFolderPath: "${HOME}/Downloads/Incomplete" # Incomplete download folder path
+General_DisableItunesLaunchOnConnectingDevice: true
 
 ICloud_Enabled: false                            # Enable iCloud configuration
 ICloud_NSDocumentSaveNewDocumentsToCloud: true   # Save to iCloud by default
