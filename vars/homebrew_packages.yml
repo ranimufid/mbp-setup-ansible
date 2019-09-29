@@ -46,7 +46,6 @@ brew_packages:
   - libpng
   - linkerd
   - mackup
-  - macvim
   - mysql
   - neofetch
   - neovim
