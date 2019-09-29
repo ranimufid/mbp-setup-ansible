@@ -78,7 +78,7 @@ brew_packages:
   - zsh-autosuggestions
   - zsh-syntax-highlighting
   - wata727/tflint/tflint
-  - datawire/blackbird/telepresence
+  #- datawire/blackbird/telepresence
   - derailed/k9s/k9s
   - johanhaleby/kubetail/kubetail
   - prospectone/perfops/perfops
