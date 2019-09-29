@@ -99,8 +99,8 @@ brew_cask_packages:
   - font-spacemono-nerd-font
   - google-chrome
   - iterm2
-  - java
-  - java8
+  #- java
+  #- java8
   - karabiner-elements
   - karabiner-elements
   - minikube
