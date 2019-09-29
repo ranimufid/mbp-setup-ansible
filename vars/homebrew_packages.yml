@@ -6,7 +6,7 @@ brew_taps:
   - homebrew/core
   - homebrew/services
   - homebrew/bundle
-  - caskroom/fonts
+  #- caskroom/fonts
   - caskroom/versions
   - datawire/blackbird
   - derailed/k9s
