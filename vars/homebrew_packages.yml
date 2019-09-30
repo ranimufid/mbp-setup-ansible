@@ -76,6 +76,7 @@ brew_packages:
   - yamllint
   - zsh
   - zsh-autosuggestions
+  - aws-iam-authenticator
   - zsh-syntax-highlighting
   - wata727/tflint/tflint
   #- datawire/blackbird/telepresence
