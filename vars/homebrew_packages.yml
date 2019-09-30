@@ -98,6 +98,7 @@ brew_cask_packages:
   - font-source-code-pro
   - font-spacemono-nerd-font
   - google-chrome
+  - firefox
   - iterm2
   #- java
   #- java8
