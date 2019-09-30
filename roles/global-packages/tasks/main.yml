@@ -1,4 +1,9 @@
 ---
+- name: Source nvm
+  shell: mkdir -p ~/.nvm && source $(brew --prefix nvm)/nvm.sh
+  changed_when: false
+  args:
+    warn: false
 - name: Install global NPM packages
   npm:
     name: "{{ item.name | default(item) }}"
