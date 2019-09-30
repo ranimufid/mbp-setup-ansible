@@ -1,6 +1,6 @@
 ---
 - name: Source nvm
-  shell: mkdir -p ~/.nvm && export NVM_DIR="$HOME/.nvm" && source $(brew --prefix nvm)/nvm.sh
+  shell: mkdir -p ~/.nvm && export NVM_DIR="$HOME/.nvm" && source $(brew --prefix nvm)/nvm.sh && nvm install node
   changed_when: false
   args:
     warn: false
