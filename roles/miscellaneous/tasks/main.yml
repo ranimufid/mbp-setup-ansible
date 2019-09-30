@@ -30,10 +30,10 @@
   args:
     warn: false
 
-- name: "Prompt for user input before proceed to restore mackup"
-  pause:
-    prompt: "Press return once dropbox is done syncing"
-    echo: no
+# - name: "Prompt for user input before proceed to restore mackup"
+#   pause:
+#     prompt: "Press return once dropbox is done syncing"
+#     echo: no
 
 # - name: "mackup - restore"
 #   shell: mackup restore
