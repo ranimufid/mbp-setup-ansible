@@ -86,7 +86,7 @@ brew_packages:
   - yleisradio/terraforms/chtf
 
 brew_cask_packages:
-  - alfred
+  - alfred3
   - dbeaver-community
   - docker
   - dropbox
