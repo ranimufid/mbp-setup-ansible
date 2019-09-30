@@ -1,5 +1,5 @@
 ---
-- name: Source nvm
+- name: Source nvm and install node 12.11.0
   shell: mkdir -p ~/.nvm && export NVM_DIR="$HOME/.nvm" && source $(brew --prefix nvm)/nvm.sh && nvm install 12.11.0
   changed_when: false
   args:
