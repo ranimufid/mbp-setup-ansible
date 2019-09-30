@@ -96,3 +96,11 @@
 - name: "General - Disable iTunes launching on connecting device"
   shell: defaults write com.apple.iTunesHelper ignore-devices 1
   when: General_DisableItunesLaunchOnConnectingDevice is defined
+
+- name: "General - Enable Tap to click"
+  shell: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true && defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+  when: General_EnableTapToClick is defined
+
+- name: "General - Enable 3-finger Drag"
+  shell: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true && defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+  when: General_EnableTapToClick is defined
