@@ -19,5 +19,6 @@
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default('present') }}"
     version: "{{ item.version | default(omit) }}"
-    executable: "/usr/local/bin/pip"
+    executable: "pip3"
+    extra_args: --user
   with_items: "{{ pip_packages }}"
