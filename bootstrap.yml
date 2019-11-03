@@ -6,6 +6,7 @@
     - "vars/homebrew_packages.yml"
     - "vars/global_packages.yml"
     - "vars/mac_osx_settings.yml"
+    - "vars/ansible-miscellaneous-repos-paths.yml"
 
   roles:
     - name: mac-osx-settings
