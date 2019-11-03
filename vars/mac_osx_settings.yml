@@ -99,8 +99,8 @@ General_ScreenshotFileType: "png"                # Setting screenshot filetype t
 General_UseIncompleteDownloadFolder: true        # Use specific folder to store incomplete downloads
 General_IncompleteDownloadFolderPath: "${HOME}/Downloads/Incomplete" # Incomplete download folder path
 General_DisableItunesLaunchOnConnectingDevice: true # Prevent iTunes from launching when connecting device
-General_EnableTapToClick: false                   # Enable tap to click
-General_EnableThreeFingerDrag: false              # Enable three finger drag
+General_EnableTapToClick: true                   # Enable tap to click
+General_EnableThreeFingerDrag: true              # Enable three finger drag
 
 ICloud_Enabled: false                            # Enable iCloud configuration
 ICloud_NSDocumentSaveNewDocumentsToCloud: true   # Save to iCloud by default
