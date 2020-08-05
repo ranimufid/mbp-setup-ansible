@@ -56,3 +56,6 @@
     accept_hostkey: true
     update: false
   with_items: "{{ repositories_for_clone }}"
+
+- name: "SDK MAN - Install SDK MAN"
+  command: curl -s "https://get.sdkman.io" | bash
