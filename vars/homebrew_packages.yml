@@ -6,8 +6,7 @@ brew_taps:
   - homebrew/core
   - homebrew/services
   - homebrew/bundle
-  #- caskroom/fonts
-  - caskroom/versions
+  - homebrew/cask-versions
   - datawire/blackbird
   - derailed/k9s
   - johanhaleby/kubetail
@@ -16,6 +15,9 @@ brew_taps:
   - wata727/tflint
   - yleisradio/terraforms
 
+brew_high_dependency_casks:
+  - java
+
 brew_packages:
   - ansible
   - autoconf
@@ -23,7 +25,6 @@ brew_packages:
   - aws-elasticbeanstalk
   - awscli
   - azure-cli
-  - calicoctl
   - chtf
   - composer
   - coreutils
@@ -39,28 +40,28 @@ brew_packages:
   - httpie
   - jq
   - kubectx
-  - kubernetes-cli
+  - kubectl
+  # - kubernetes-cli
   - kubernetes-helm
-  - libgpg-error
-  - libidn
-  - libpng
-  - linkerd
+  # - libgpg-error
+  # - libidn
+  # - libpng
   - mackup
   - mysql
-  - neofetch
-  - neovim
-  - nvm
+  # - neofetch
+  # - neovim
+  # - nvm
   - openssl
   - packer
   - perl
   - php
-  - php@7.1
+  # - php@7.1
   - postgresql
   - pre-commit
   - python
   - ruby
   - skaffold
-  - sops
+  # - sops
   - speedtest-cli
   - stern
   - teleport
@@ -69,7 +70,7 @@ brew_packages:
   - terraforming
   - the_silver_searcher
   - tree
-  - vault
+  # - vault
   - vim
   - watch
   - wget
@@ -85,6 +86,9 @@ brew_packages:
   - prospectone/perfops/perfops
   - reactiveops/tap/rbac-lookup
   - yleisradio/terraforms/chtf
+  - bzt
+  - coreutils
+  - powerlevel10k
 
 brew_cask_packages:
   - alfred3
@@ -101,8 +105,6 @@ brew_cask_packages:
   - google-chrome
   - firefox
   - iterm2
-  #- java
-  #- java8
   - karabiner-elements
   - karabiner-elements
   - minikube
