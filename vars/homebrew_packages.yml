@@ -41,27 +41,18 @@ brew_packages:
   - jq
   - kubectx
   - kubectl
-  # - kubernetes-cli
   - kubernetes-helm
-  # - libgpg-error
-  # - libidn
-  # - libpng
   - mackup
   - mysql
-  # - neofetch
-  # - neovim
-  # - nvm
   - openssl
   - packer
   - perl
   - php
-  # - php@7.1
   - postgresql
   - pre-commit
   - python
   - ruby
   - skaffold
-  # - sops
   - speedtest-cli
   - stern
   - teleport
@@ -70,7 +61,6 @@ brew_packages:
   - terraforming
   - the_silver_searcher
   - tree
-  # - vault
   - vim
   - watch
   - wget
@@ -80,7 +70,6 @@ brew_packages:
   - aws-iam-authenticator
   - zsh-syntax-highlighting
   - wata727/tflint/tflint
-  #- datawire/blackbird/telepresence
   - derailed/k9s/k9s
   - johanhaleby/kubetail/kubetail
   - prospectone/perfops/perfops
@@ -88,7 +77,8 @@ brew_packages:
   - yleisradio/terraforms/chtf
   - bzt
   - coreutils
-  - powerlevel10k
+  - romkatv/powerlevel10k/powerlevel10k
+  - minikube
 
 brew_cask_packages:
   - alfred3
@@ -101,23 +91,19 @@ brew_cask_packages:
   - font-hack-nerd-font
   - font-menlo-for-powerline
   - font-source-code-pro
-  - font-spacemono-nerd-font
+  - font-space-mono-nerd-font
   - google-chrome
   - firefox
   - iterm2
-  - karabiner-elements
-  - karabiner-elements
-  - minikube
   - ngrok
   - postman
   - skype
   - slack
   - slate
   - spotify
-  - sublime-text
-  - terraform-0.11.13
-  - terraform-0.12.0
   - vagrant
   - vagrant-manager
   - visual-studio-code
   - vlc
+  - karabiner-elements
+  - zoomus
