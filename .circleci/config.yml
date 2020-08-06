@@ -1,0 +1,13 @@
+version: 2.1
+
+jobs:
+  build-and-test:
+    macos:
+      xcode: 11.3.0
+    steps:
+      - checkout
+
+workflows:
+  build-test-lint:
+    jobs:
+      - build-and-test
