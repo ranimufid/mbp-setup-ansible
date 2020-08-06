@@ -10,20 +10,23 @@
   register: zsh_custom_plugins
 
 - name: "ZSH - Installing oh-my-zsh"
-  command: curl -L http://install.ohmyz.sh | sh
+  shell: curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash -
   when: zsh_exists.stat.exists|bool != true
-
-# - name: "ZSH - Setting up plugins - zsh-syntax-highlighting"
-#   shell: cd ~/.oh-my-zsh/custom/plugins && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-#   when: zsh_custom_plugins.stat.exists|bool != true
 
 - name: "ZSH - Setting up plugins - zsh-nvm"
   shell: cd ~/.oh-my-zsh/custom/plugins && git clone git://github.com/lukechilds/zsh-nvm.git
   when: zsh_custom_plugins.stat.exists|bool != true
 
+- name: "ZSH - Add brew zsh to /etc/shells"
+  become: true
+  lineinfile:
+    path: /etc/shells
+    state: present
+    regexp: '^/usr/local/bin/zsh'
+    line: '/usr/local/bin/zsh'
+
 - name: "ZSH - Setting default shell"
   become: true
-  # shell: "chsh -s $(which zsh) {{ ansible_user_id }}"
   shell: "chsh -s $(which zsh)"
   when: not zsh_exists.stat.exists
   register: chsh_result
@@ -34,17 +37,6 @@
   changed_when: false
   args:
     warn: false
-
-# - name: "Prompt for user input before proceed to restore mackup"
-#   pause:
-#     prompt: "Press return once dropbox is done syncing"
-#     echo: no
-
-# - name: "mackup - restore"
-#   shell: mackup restore
-#   changed_when: false
-#   args:
-#     warn: false
 
 - name: Clone required repositories
   git:
@@ -57,5 +49,5 @@
     update: false
   with_items: "{{ repositories_for_clone }}"
 
-- name: "SDK MAN - Install SDK MAN"
-  command: curl -s "https://get.sdkman.io" | bash
+# - name: "SDK MAN - Install SDK MAN"
+#   command: curl -s "https://get.sdkman.io" | bash
