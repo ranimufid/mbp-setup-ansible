@@ -61,12 +61,12 @@ Finder_FinderSpawnTab: true                      # Open folders in tabs instead 
 Finder_AppleShowAllExtensions: false             # Show all fiename extensions
 Finder_FXEnableExtensionChangeWarning: true      # Show warning before changing an extension
 Finder_WarnOnEmptyTrash: false                   # Show warning before emptying the trash
-Finder_FXDefaultSearchScope: "SCev"              # When performing a search (SCev:Search This Mac, SCcf:Search the Current Folder, SCsp:Use the Previous Search Scope)
+Finder_FXDefaultSearchScope: "SCcf"              # When performing a search (SCev:Search This Mac, SCcf:Search the Current Folder, SCsp:Use the Previous Search Scope)
 Finder_AppleShowAllFiles: "false"                # Show hidden files
-Finder_FXPreferredViewStyle: "Clmv"              # View as (icnv:Icons, Nlsv:List, clmv:Column, Flwv:Cover Flow)
+Finder_FXPreferredViewStyle: "Nlsv"              # View as (icnv:Icons, Nlsv:List, clmv:Column, Flwv:Cover Flow)
 Finder_FXPreferredGroupBy: "None"                # Arrange By (None, Name, Application Category, Date Last Opened, Date Added, Size, Finder Tags)
 Finder_ShowTabView: true                         # Show Tab Bar
-Finder_ShowPathbar: false                        # Show Path Bar
+Finder_ShowPathbar: true                         # Show Path Bar
 Finder_ShowStatusBar: false                      # Show Status Bar
 Finder_ShowSidebar: true                         # Show Side Bar
 Finder_ColumnShowIcons: true                     # Show Preview
@@ -94,7 +94,7 @@ General_MouseTrackPadScaling: true               # Enable trackpad scaling confi
 General_TrackPadScaling: 2                       # Set trackpad scaling
 General_MouseScaling: 2.5                        # Set mouse scaling
 General_DoNotOfferNewDisksForBackup: true        # Preventing Time Machine from prompting to use new hard drives as backup volume
-General_ScreenshotLocation: "$HOME/Desktop"      # Setting screenshots location to ~/Desktop
+General_ScreenshotLocation: "$HOME/Dropbox/Screenshots"      # Setting screenshots location to ~/Desktop
 General_ScreenshotFileType: "png"                # Setting screenshot filetype to png
 General_UseIncompleteDownloadFolder: true        # Use specific folder to store incomplete downloads
 General_IncompleteDownloadFolderPath: "${HOME}/Downloads/Incomplete" # Incomplete download folder path
@@ -119,10 +119,10 @@ Keyboard_PowerButtonSleepsSystem: false            # Prevent accidental Power bu
 Keyboard_PressAndHoldEnabled: false                # Disable press-and-hold for keys in favor of key repeat
 
 LanguageRegion_Enabled: false                    # Enable Language and Region configuration
-LanguageRegion_Locale: "en_US@currency=USD"      # Locale and Currency (United States : en_US@currency=USD, Great Britian : en_GB@currency=EUR)
-LanguageRegion_MeasurementUnits: "Inches"        # Measure Units (Inches, Centimeters)
+LanguageRegion_Locale: "en_GB@currency=EUR"      # Locale and Currency (United States : en_US@currency=USD, Great Britian : en_GB@currency=EUR)
+LanguageRegion_MeasurementUnits: "Centimeters"   # Measure Units (Inches, Centimeters)
 LanguageRegion_Force24HourTime: "true"           # Force 12/24 hour time
-LanguageRegion_MetricUnits: "false"              # Set Metric Units
+LanguageRegion_MetricUnits: "true"               # Set Metric Units
 
 MissionControl_Enabled: false                    # Enable Mission Control configuration
 MissionControl_MruSpaces: false                  # Automatically rearrange Spaces based on most recent use
