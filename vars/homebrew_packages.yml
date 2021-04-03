@@ -15,6 +15,7 @@ brew_taps:
   - wata727/tflint
   - yleisradio/terraforms
   - sl1pm4t/k2tf
+  - xwmx/taps
 
 brew_high_dependency_casks:
   - java
@@ -31,6 +32,7 @@ brew_packages:
   - coreutils
   - dep
   - figlet
+  - gh
   - git
   - git-crypt
   - git-extras
@@ -81,11 +83,16 @@ brew_packages:
   - coreutils
   - romkatv/powerlevel10k/powerlevel10k
   - minikube
+  - xwmx/taps/nb
 
 brew_cask_packages:
   - alfred3
+  - brave-browser
+  - cyberduck
   - dbeaver-community
+  - disk-inventory-x
   - docker
+  - drawio
   - dropbox
   - evernote
   - firefox
@@ -95,8 +102,10 @@ brew_cask_packages:
   - font-source-code-pro
   - font-space-mono-nerd-font
   - google-chrome
+  - handbrake
   - firefox
   - iterm2
+  - keepassx
   - ngrok
   - postman
   - skype
@@ -108,4 +117,4 @@ brew_cask_packages:
   - visual-studio-code
   - vlc
   - karabiner-elements
-  - zoomus
+  - zoom
