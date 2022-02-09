@@ -15,17 +15,14 @@ brew_taps:
   - reactiveops/tap
   - wata727/tflint
   - yleisradio/terraforms
-  - sl1pm4t/k2tf
   - xwmx/taps
   - gjbae1212/gossm
   - jckuester/tap
   - romkatv/powerlevel10k
 
-brew_high_dependency_casks:
-  - java
-
 # To list all of your currently installed top level brew formulas in order to update this list, use "brew leaves"
 brew_packages:
+  - java
   - ansible-lint
   - automake
   - aws-elasticbeanstalk
