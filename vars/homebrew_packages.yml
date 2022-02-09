@@ -7,6 +7,7 @@ brew_taps:
   - homebrew/services
   - homebrew/bundle
   - homebrew/cask-versions
+  - cantino/mcfly
   - datawire/blackbird
   - derailed/k9s
   - johanhaleby/kubetail
@@ -16,82 +17,117 @@ brew_taps:
   - yleisradio/terraforms
   - sl1pm4t/k2tf
   - xwmx/taps
+  - gjbae1212/gossm
+  - jckuester/tap
+  - romkatv/powerlevel10k
 
 brew_high_dependency_casks:
   - java
 
+# To list all of your currently installed top level brew formulas in order to update this list, use "brew leaves"
 brew_packages:
-  - ansible
-  - autoconf
+  - ansible-lint
   - automake
   - aws-elasticbeanstalk
+  - aws-iam-authenticator
   - awscli
+  - awslogs
   - azure-cli
-  - chtf
+  - bats
+  - bfg
+  - bzt
+  - cantino/mcfly/mcfly
+  - checkov
+  - commitizen
   - composer
   - coreutils
   - dep
+  - derailed/k9s/k9s
+  - docker-compose
+  - docker-credential-helper
+  - docker-credential-helper-ecr
+  - dust
+  - exa
+  - ffmpeg
   - figlet
+  - fluent-bit
   - gh
-  - git
+  - gifsicle
   - git-crypt
   - git-extras
-  - glib
-  - go
+  - git-xargs
+  - gjbae1212/gossm/gossm
   - goaccess
+  - helm
+  - helm@2
   - htop
+  - httpd
   - httpie
+  - jansson
+  - jckuester/tap/awsweeper
+  - jo
+  - johanhaleby/kubetail/kubetail
   - jq
   - k2tf
   - kubectx
-  - kubectl
-  - kubernetes-helm
+  - libidn
+  - libmetalink
   - mackup
+  - minikube
+  - mitmproxy
   - mysql
-  - openssl
+  - nghttp2
+  - ngrep
+  - nvm
   - packer
-  - perl
   - php
+  - podman
+  - poetry
   - postgresql
   - pre-commit
-  - python
-  - ruby
+  - prospectone/perfops/perfops
+  - python-tk@3.9
+  - python@3.7
+  - python@3.8
+  - reactiveops/tap/rbac-lookup
+  - redis
+  - romkatv/powerlevel10k/powerlevel10k
+  - shellcheck
   - skaffold
+  - sops
   - speedtest-cli
+  - starship
   - stern
   - teleport
   - telnet
+  - terraform-docs
   - terraform_landscape
   - terraforming
+  - tflint
   - the_silver_searcher
+  - tldr
+  - tmate
   - tree
+  - velero
   - vim
+  - warrensbox/tap/tfswitch
   - watch
+  - watchexec
   - wget
-  - yamllint
-  - zsh
-  - zsh-autosuggestions
-  - aws-iam-authenticator
-  - zsh-syntax-highlighting
-  - wata727/tflint/tflint
-  - derailed/k9s/k9s
-  - johanhaleby/kubetail/kubetail
-  - prospectone/perfops/perfops
-  - reactiveops/tap/rbac-lookup
-  - yleisradio/terraforms/chtf
-  - bzt
-  - coreutils
-  - romkatv/powerlevel10k/powerlevel10k
-  - minikube
   - xwmx/taps/nb
+  - yamllint
+  - yleisradio/terraforms/chtf
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
 
+# To list all installed casks without tabs "brew list --cask | sed 's/\t\t*/\n/g'"
 brew_cask_packages:
   - alfred3
   - brave-browser
+  - cmake
   - cyberduck
   - dbeaver-community
   - disk-inventory-x
-  - docker
   - drawio
   - dropbox
   - evernote
@@ -101,20 +137,27 @@ brew_cask_packages:
   - font-menlo-for-powerline
   - font-source-code-pro
   - font-space-mono-nerd-font
+  - gitify
   - google-chrome
   - handbrake
-  - firefox
   - iterm2
+  - java
+  - karabiner-elements
   - keepassx
   - ngrok
+  - notion
   - postman
+  - session-manager-plugin
   - skype
   - slack
   - slate
   - spotify
+  - terraform-0.13.5
+  - terraform-0.14.11
+  - terraform-0.15.4
+  - terraform-1.0.5
   - vagrant
   - vagrant-manager
   - visual-studio-code
   - vlc
-  - karabiner-elements
   - zoom
